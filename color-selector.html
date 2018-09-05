@@ -1,0 +1,19 @@
+<div class="ColorSelector">
+
+  <label class="ColorSelector-label" style="background-color:#eee;">
+    <input class="ColorSelector-checkbox" type="checkbox"
+      ng-change="allToggle()"
+      ng-model="allSelected"
+    >
+    <span class="ColorSelector-allCopy">all</span>
+  </label>
+
+  <label class="ColorSelector-label"
+    ng-repeat="color in colors"
+    ng-style="{backgroundColor:fcolor(color)}"
+  >
+    <input class="ColorSelector-checkbox" type="checkbox"
+      ng-model="color.selected"
+    >
+  </label>
+</div>
